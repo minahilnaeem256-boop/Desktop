@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>My Menu Card</title>
+        <style>
+            body{
+                font-family: arial;
+                background: rgb(235, 235, 137);
+                color: Maroon;
+                text-align: center;
+            }
+            .menucard{
+                width: 600px;
+                border-radius: 20px;
+                border: 3px solid green;
+                background-color: lightgreen;
+                box-shadow: 0 0 20px rgb(216, 216, 144);
+            }
+            .resturant-name{
+                font-size: 40px;
+                font-weight: bold;
+                color: maroon;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                text-shadow: 0 0 12px rgb(212, 115, 115);
+            }
+            .tagline{
+                font-size: 20px;
+                font-style: italic;
+                text-align: center;
+                text-decoration: underline wavy brown;
+                color: brown;
+            }
+            .menu-section{
+                border: 2px solid darkgreen;
+                border-radius: 20px;
+                box-shadow: 3px 3px 10px orange;
+            }
+            .section-title{
+                font-size: 26px;
+                color: crimson;
+                text-transform: capitalize;
+                text-decoration: underline;
+            }
+            .dish-name{
+                font-size:20px;
+                font-weight:italic;
+                text-decoration:overline;
+                color: rgb(105, 14, 32);
+                padding: 20px;
+            }
+            .dish-name:hover{
+                transform: scale(2.2);
+            }
+            .dish-description{
+                font-size: 18px;
+                line-height:1.1;
+                text-indent: 30px;
+                color: brown;
+            }
+            .specialoffer{
+                font-size:30px;
+                font-weight: bold;
+                color: darksalmon;
+                background-color: rgb(185, 79, 67);
+                text-align: center;
+                text-transform: capitalize;
+                text-shadow: 2px 2px 3px lightsalmon;
+                box-shadow: 0 0 12px rgb(100,70,50);
+                transform: rotate(-2deg);
+            }
+            .specialoffer:hover{
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="menucard">
+            <h1 class="resturant-name">Bakeology</h1>
+            <p class="tagline">World's best bakers!!!</p>
+
+            <div class="menu-section">
+                <h2 class="section-title">Starters</h2>
+                <p class="dish-name">Russian Salad</p>
+                <p class="dish-description">Mixture of diced vegetables, fruits, nuts, eggs, pickles,
+                    potatoes all mixed in a creamy dressing. </p>
+                <p class="dish-name">Bread Sticks</p>
+                <p class="dish-description">soft, fluffy, long sticks of semi-crispy bread.</p>   
+            </div>
+
+        <div class="menu-section">
+            <h2 class="section-title">Main Course</h2>
+
+            <p class="dish-name">ChickenTikka Pizza</p>
+            <p class="dish-description">Crispy crust topped with a yogurt and spice-marinated chicken, 
+                rich pizza sauce, and gooey cheese.</p>
+            <p class="dish-name">Loaded Fries</p>
+            <p class="dish-description">crispy fried potatoes piled high with a flavorful combination 
+                of melted cheese, savory meats, vegetables, and rich sauces.</p> 
+        </div>
+        <p class="specialoffer">Weekend special: 30% off!</p>
+        </div>
+    </body>
+</html>
