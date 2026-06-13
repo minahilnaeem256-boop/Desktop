@@ -1,0 +1,86 @@
+.square1{
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    animation-name: moveRight ;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+@keyframes moveRight{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(300px);
+    }
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 2px solid green;
+    background-color: darksalmon;
+    animation: bounce 4s
+}
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-200px);
+    }
+}
+.square2{
+    background-color: yellow;
+    width: 60px;
+    height: 60px;
+    animation-name: changeColor;
+    animation-duration: 3s;
+}
+@keyframes changeColor{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0.75;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.25;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.square3{
+    width: 60px;
+    height: 60px;
+    background-color: blueviolet;
+    animation: spin 3s;
+    /* animation: spin 3s 2s infinite reverse;*/
+}
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    animation: pulse 3s;
+}
+@keyframes pulse{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.3);
+    }
+}
