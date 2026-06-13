@@ -1,0 +1,134 @@
+<DOCTYPE!>
+    <html>
+        <head>
+            <title>My Weather Forecast Page</title>
+            <style>
+                body{
+    background-color: lightblue;
+    background-image: radial-gradient(circle, skyblue, cornflowerblue);
+    background-size: 40px;
+    background-repeat: repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+}
+.weather-card{
+    width: 400px;
+    border: 3 px solid white;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, white, skyblue);
+}
+.weather-icon{
+    font-size: 70px;
+    color: darkblue;
+}
+.temperature{
+    font-size: 48px;
+    font-weight: bold;
+    color:  rgb(61, 61, 221);
+    text-align: center;
+}
+.details{
+    font-size: 18px;
+    color: #003366;
+    text-align: center;
+}
+.day{
+    border: 2px solid #4682b4;
+    border-radius: 15px;
+    font-size: 17px;
+    color: #003366;
+    text-align: center;
+}
+.forecast-section{
+    width: 600px;
+    border: 3px solid white;
+    border-radius: 15px;
+    background-image: radial-gradient(circle, white, #add8e6);
+    color:#003366;
+}
+.body2{
+  height: 20vh;
+}
+.cloud {
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  animation-name: moveRight;
+  animation: moveRight 5s linear infinite;
+
+}
+.cloud-one{
+  width: 250px;
+  height: 100px;
+  top: 50px;
+}
+.cloud::before{
+  content: '';
+  top: -40px;
+  left: 10%;
+  width: 40%;
+  height: 120%;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+}
+.cloud::after {
+  content: '';
+  width: 30%;
+  height: 80%;
+  top: -30px;
+  left: 42%;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+@keyframes moveRight{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(1000px);
+    }
+  }
+            </style>
+        </head>
+        <body>
+          <div class="body2">
+            <div class="cloud">
+            <div class="cloud-one"></div>
+              <div class="cloud::before"></div>
+              <div class="cloud::after"></div>
+            </div>
+            </div>
+        <h1 style="color: darkblue";>My Weather App Homepage</h1>
+        <div class="weather-card">
+            <h2 style="color: #003366; text-align: center;">Today's Weather</h2>
+
+        <div class="weather-icon">Cloudy</div>
+          <div class="temperature">
+            <p>28°C</p></div>
+            <div class="details">
+                <p>City: Lahore</p>
+                <p>Condition: Partly Cloudy</p>
+                <p>Humidity: 62%</p>
+                <p>Wind Speed: 12 km/h</p>
+            </div>
+          </div>
+
+          <h2 style="color:darkslateblue";>Weekly Forecast</h2>
+          <div class="forecast-section">
+            <h3 style="color: darkslateblue; text-align: center;">Next 5 Days</h3>
+            <div class="day">
+                <p>Monday: Sunny - 30°C</p>
+                <p>Tuesday: cloudy - 27°C</p>
+                <p>Wednesday: Sunny - 32°C</p>
+                <p>Thursday: Windy - 25°C</p>
+                <p>Friday: Rainy - 21°C</p>
+            </div>
+          </div>   
+        </body>
+    </html>
