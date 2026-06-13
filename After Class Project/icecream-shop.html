@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Icecream shop page</title>
+        <style>
+            body{
+                background: rgb(231, 144, 158);
+                font-family: Arial;
+                text-align: center;
+                color: rgb(6, 68, 52);
+            }
+            img{
+                width: 190px;
+                height: 130px;
+                transition: transform 0.3s ease;
+            }
+            img:hover{
+                transform: rotate(180deg);
+            }
+            h1{
+                color: yellow;
+                font-size: 35px;
+                font-weight: bold;
+                text-shadow: 4px 4px rgb(177, 58, 77);
+                word-spacing: 3px;
+            }
+            h1+p{
+                color: #7a37b9;
+                font-weight: bold;
+                background-color: lightblue;
+                border-radius: 10px;
+                font-size: 20px; 
+                word-spacing: 3px;
+            }
+            .shop-description::first-letter{
+                font-size: 36px;
+                color: rgb(10, 62, 160);
+                font-weight: bold;
+            }
+            .menu-box{
+                width: 400px;
+                background-color: lightblue;
+                border: 2px solid rgb(9, 88, 88);
+                border-radius: 16px;
+                margin: 20px auto;
+                padding: 20px;
+            }
+            h2{
+                text-decoration: underline;
+                text-shadow: 3px 3px 5px rgb(160, 102, 134);
+            }
+            ul{
+                padding: 0;
+            }
+            ul>li{
+                background-color: #ce95a8;
+                color: #68214e;
+                padding:14px;
+                margin:13px;
+                font-size: 18px;
+                border: 2px solid #2c0d21;
+                border-radius: 15px;
+                list-style: none;
+            }
+            ul>li:nth-child(4){
+                background-color: aqua;
+                color: maroon;
+                border: 3px solid rgb(136, 44, 53); 
+                font-weight: bold;
+            }
+            ul>li:hover{
+                background-color: #8a386a;
+                color: white;
+                cursor: pointer;
+                transform: scale(1.05); 
+            }
+            button{
+                background-color: #bd4b1e;
+                color: white;
+                border: none;
+                border-radius: 20px;
+                padding: 12px 12px;
+                font-size:20px;
+                font-weight: bold;
+                box-shadow: 2px 2px 5px gold;
+            }
+            button:hover{
+                background-color: #ffff00;
+            }
+            .specialoffer{
+                font-size: 30px;
+                font-weight: bold;
+                color: rgb(209, 196, 192);
+                background-color: #b45e7b;
+                text-align: center;
+                text-transform: capitalize;
+                text-shadow: 2px 2px 3px lightsalmon;
+                box-shadow: 0 0 12px rgb(100,70,50);
+            }
+            .specialoffer:hover{
+                transform: scale(1.1);
+                cursor: pointer;
+                background-color: #8a386a;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="icecream logo.jpg" alt="Icecream">
+        <h1>Cone Scoopers</h1>
+        <p>Welcome to the magic land of icecream!!!</p>
+        <p class="shop-description">
+            Enjoy delicious icecreams made from fresh milk and natural ingredients, no artificial
+            flavours. Let's dig in!!.
+        </p>
+        <div class="menu-box">
+            <h2>Today's icecream flavours</h2>
+            <ul>
+                <li>Chocolate Haezulnut</li>
+                <li>Cookies and Cream</li>
+                <li>Mango Delight</li>
+                <li>Lotus - Today's Special</li>
+                <li>Very Berry Strawberry</li>
+                <li>Classic Vanilla</li>
+                <li>Caramel Fudge</li>
+            </ul>
+             
+            <button>Order Now</button>
+             <p class="specialoffer">Weekend special: 30% off!</p>
+        </div>
+    </body>
+</html>
