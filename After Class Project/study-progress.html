@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Study In Process</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <style>
+        body{
+            background: rgb(236, 206, 150);
+            font-family: Arial sans-serif;
+        }
+        .jumbotron{
+            background-color: rgb(153, 241, 187);
+            border-left: 12px solid maroon;
+            border-radius: 10px;
+        }
+        .jumbotron h1{
+            color: rgb(59, 10, 59);
+        }
+        .section-title{
+            color: rgb(14, 58, 27);
+            text-decoration: underline wavy;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p{
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .btn{
+            box-shadow: 4px 2px gray;
+            
+        }
+        .btn:hover{
+            transform: scale(1.1);
+        }
+     </style>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1>Tracking my Study Progress</h1>
+                <p class="lead">It lets you track all subjects progress, adds badges and even keeps full track of 
+                    your studies.
+                </p>
+                <button class="btn btn-danger text-bold">Physics</button>
+                <button class="btn btn-warning text-bold">Urdu</button>
+                <button class="btn btn-success text-bold">Arts</button>
+                <button class="btn btn-primary text-bold">Computer</button>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Achievements in Lessons <span class="badge badge-info">20</span></h2>
+            <p>Physics<span class="badge badge-danger badge-pill">7 lessons</span></p>
+            <p>Urdu<span class="badge badge-warning badge-pill">5 lessons</span></p>
+            <p>Arts<span class="badge badge-success badge-pill">4 lessons</span></p>
+            <p>Computer<span class="badge badge-primary badge-pill">4 lessons</span></p>
+            <br>
+            <h2 class="section-title">Progress in Lessons</h2>
+            <div class="progress mb-3">
+                <div class="progress-bar bg-danger" style="width:75%">75%</div>
+            </div>
+            <br>
+            <div class="progress mb-3">
+                <div class="progress-bar bg-warning" style="width:60%">60%</div>
+            </div>
+            <br>
+            <div class="progress mb-3">
+                <div class="progress-bar bg-success" style="width:45%">45%</div>
+            </div>
+            <br>
+            <div class="progress mb-3">
+                <div class="progress-bar bg-primary" style="width:45%">45%</div>
+            </div>
+        </div>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+        </script>
+    </body>
+</html>
