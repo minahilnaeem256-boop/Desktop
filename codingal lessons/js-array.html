@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <p id="myjoin"></p>
+        <script>
+        
+            var numbers = [11,22,33,44,55,66,77];
+            console.log(numbers);
+            numbers.pop();
+            console.log(numbers);
+            numbers.push(88);
+            console.log(numbers);
+            numbers.unshift(34);
+            console.log(numbers);
+            numbers.shift();
+            console.log(numbers);
+            console.log(numbers.includes(33));
+            console.log(numbers.indexOf(66));
+            console.log(numbers.slice(0,4));
+            document.getElementById("myjoin").innerHTML= numbers.join("#");
+
+        </script>
+    </body>
+</html>
