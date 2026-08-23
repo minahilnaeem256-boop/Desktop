@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>DOM zoo activity</title>
+        <style>
+            body{
+                font-family: Arial sans-serif;
+                background-color: rgb(232, 245, 220);
+                text-align: center;
+                padding: 20px;
+            }
+            h1{
+                color: rgb(16, 51, 16);
+            }
+            #zoo{
+                border: 2px dashed rgb(81, 200, 204);
+                margin: 10px;
+                padding: 20px;
+                border-radius: 15px;
+                text-align: center;
+                background: rgb(114, 218, 218);
+            }
+            .zone{
+                border: 2px dashed rgb(223, 128, 223);
+                margin: 10px;
+                padding: 20px;
+                border-radius: 15px;
+                text-align: center;
+                background: beige;
+                color: maroon;
+                font-size: 20px;
+                box-shadow: grey 2px 2px;
+            }
+            button{
+                background: rgb(7, 3, 61);
+                color: lightblue;
+                padding: 8px;
+                border: 1px solid white;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Zoo</h1>
+        <p>Use the inner html element to add animals to their respective sections</p>
+        <div id="zoo">
+            <div class="zone">Zone:1 <span id="zone1"></span></div>
+            <div class="zone">Zone:2 <span id="zone2"></span></div>
+            <div class="zone">Zone:3 <span id="zone3"></span></div>
+            <div class="zone">Total Animals:<span id="total"></span></div>
+            </div>
+            <br>
+
+            <button onclick="openZoo()">Open The Zoo</button>
+            <p id="zoo-status"></p>
+
+            <script>
+                function openZoo(){
+                    document.getElementById("zone1").innerHTML = "Lion";
+                    document.getElementById("zone2").innerHTML = "Giraffe";
+                    document.getElementById("zone3").innerHTML = "Gorilla";
+                    document.getElementById("total").innerHTML = "3";
+                    document.getElementById("zone").style.backgroundColor="green";
+                    document.getElementById("zoo-status").innerHTML= document.title +"is now open";
+
+                }
+            </script>
+    </body>
+</html>
