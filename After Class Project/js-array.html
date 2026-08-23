@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Arrays in javascript</title>
+    </head>
+    <style>
+        body{
+            font-size: 18px;
+            font-style: arial sans-serif;
+            background-color: lightgreen;
+            color: rgb(7, 43, 7);
+            word-spacing: 2px;
+        }
+        h2{color: maroon;}
+    </style>
+    <body>
+        <h2>Arrays in html</h2>
+        <script>
+            var student={
+                name: 'Ana',
+                age: '16',
+                grade: '09',
+                hobby: 'coding',
+                fav_movie: 'Avengers'
+            };
+            document.write("student name is:" +student.name,"<br>");
+            document.write("Student faviourite movie is:" + student.fav_movie,"<br>");
+            document.write("<br>");
+
+            var colors= ["red","yellow","blue","green","purple"];
+
+            document.write("original colors are:" +"<br>"+ colors);
+            document.write("<br>");
+            document.write("my favourite colors is:" +"<br>"+ colors[4]);
+            document.write("<br>");
+            colors.pop();
+            document.write("colors after popping are:" +"<br>"+ colors.join("%"));
+            document.write("<br>");
+            colors.push("Orange");
+            document.write("colors after pushing a new element are:" +"<br>"+ colors.join("*"));
+            document.write("<br>");
+            colors.shift();
+            document.write("colors after shifting an element are:"+ "<br>" + colors.join("#"));
+            document.write("<br>");
+            colors.unshift("black");
+            document.write("colors after using unshift are:" +"<br>"+ colors.join("$"));
+            document.write("<br>");
+            document.write("colors after slicing are:"+"<br>"+ colors.slice(0,2));
+            document.write("<br>");
+            document.write("index of color blue is:"+"<br>"+ colors.indexOf("blue"));            
+
+        </script>
+
+    </body>
+</html>
