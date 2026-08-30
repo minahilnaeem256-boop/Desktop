@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <title>Open the Jungle</title>
+        <style>
+            
+    body {
+      font-family: Arial, sans-serif;
+      background-color: aliceblue;
+      text-align: center;
+      color: #222222;
+    }
+
+    h1 {
+      color: darkgreen;
+    }
+
+    #zoo {
+      width: 420px;
+      border: 3px solid darkgreen;
+      border-radius: 12px;
+      background-color: white;
+      margin: 20px auto;
+      padding: 15px;
+    }
+
+    .zone {
+      border: 2px solid seagreen;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 12px;
+      background-color: #f0fff0;
+      text-align: left;
+    }
+
+    .animal {
+      font-weight: bold;
+      color: darkorange;
+    }
+
+    button {
+      background-color: darkgreen;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 22px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #output {
+      width: 420px;
+      border: 2px dashed darkgreen;
+      border-radius: 10px;
+      background-color: #ffffff;
+      margin: 20px auto;
+      padding: 12px;
+      text-align: left;
+    }
+        </style>
+    </head>
+    <body>
+        <div id="zoo">
+            <div class="zone" id="LionZone">
+                <h2>Lion Zone</h2>
+                <p>Animal: <span class="animal">Lion</span></p>
+            </div>
+             <div class="zone" id="PandaZone">
+                <h2>Panda Zone</h2>
+                <p>Animal: <span class="animal">Panda</span></p>
+            </div>
+             <div class="zone" id="HorseZone">
+                <h2>Horse Zone</h2>
+                <p>Animal: <span class="animal">Horse</span></p>
+            </div>
+        </div>
+
+        <button onclick="manageZoo()">ManageZoo</button>
+        <div id="output">
+            Information will appear here
+        </div>
+        <script>
+            function manageZoo(){
+               let zoo= document.getElementById("zoo");
+               let LionZone= document.getElementById("LionZone");
+               let PandaZone= document.getElementById("PandaZone");
+               let HorseZone= document.getElementById("HorseZone");
+               let output= document.getElementById("output");
+               
+               let parentNodeName = LionZone.parentNode.id;
+               let firstChildZone = zoo.children[0].id;
+               let secondChildZone = zoo.children[1].id;
+               let nextSiblingZone = LionZone.nextElementSibling.id;
+               let previousSiblingZone = PandaZone.previousElementSibling.id;
+
+               let elementNodeType = LionZone.nodeType;
+               let textNodeType = LionZone.firstChild.nodeType;
+
+      
+                LionZone.style.backgroundColor = "#fff3cd";
+                PandaZone.style.backgroundColor = "#d1ecf1";
+                HorseZone.style.backgroundColor = "#f8d7da";
+
+                LionZone.querySelector("h2").innerHTML = "Updated Lion Zone";
+                PandaZone.querySelector("h2").innerHTML = "Updated Panda Zone";
+                HorseZone.querySelector("h2").innerHTML = "Updated Horse Zone";
+
+            output.innerHTML =
+                "<strong>DOM Tree Information:</strong><br>" +
+                "Parent of Lion Zone: " + parentNodeName + "<br>" +
+                "First child of Zoo: " + firstChildZone + "<br>" +
+                "Second child of Zoo: " + secondChildZone + "<br><br>" +
+
+        "<strong>Sibling Node Information:</strong><br>" +
+        "Next sibling of Lion Zone: " + nextSiblingZone + "<br>" +
+        "Previous sibling of Panda Zone: " + previousSiblingZone + "<br><br>" +
+
+        "<strong>Types of Nodes:</strong><br>" +
+        "Lion Zone element node type: " + elementNodeType + "<br>" +
+        "Lion Zone first child text node type: " + textNodeType + "<br><br>" +
+
+        "<strong>DOM Update:</strong><br>" +
+        "The animal zone headings and background colours were updated using JavaScript.";
+    }
+  </script>
+
+</body>
+</html>
+
+               
+                
+          
