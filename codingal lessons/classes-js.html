@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>All about Planets</title>
+        <style>
+            body{
+                font-family: arial;
+                background: rgb(182, 99, 182);
+                padding: 20px;
+                text-align: center;
+            }
+            h1{
+                color: rgb(56, 11, 56);
+            }
+            p{
+                color: black;
+            }
+            .cards{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 25px;
+            }
+            .card{
+                background: beige;
+                border: 3px solid rgb(112, 11, 62);
+                border-radius: 15px;
+                width: 200px;
+                padding: 20px;
+            }
+            .planet-name{
+                font-size: 22px;
+                font-weight: bold;
+                color: rgb(29, 13, 97);
+            }
+            .planet-fact{
+                color: rgb(20,13,91);
+                margin-top: 10px;
+                font-size: 19px;
+                font-style: italic;
+            }
+            button{
+                background: rgb(6, 37, 66);
+                color: white;
+                border: 2px dashed white;
+                padding: 12px 23px;
+                border-radius: 9px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-top: 10px;
+            }
+            button:hover{
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Planets Card</h1>
+        <p>Use a javascript class to build planet cards!</p>
+        <button onclick="showPlanets()">Show Planets!></button>
+        <div class="cards">
+            <div id="card1"></div>
+            <div id="card2"></div>
+            <div id="card3"></div>
+        </div>
+        <script src="classes.js"></script>
+    </body>
+</html>
