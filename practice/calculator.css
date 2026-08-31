@@ -1,0 +1,42 @@
+body{
+    background: beige;
+}
+.fact-file{
+    background-color: lightsalmon;
+    color: rgb(51, 3, 3);
+    border: 3px solid rgb(238, 243, 238);
+    border-radius: 15px;
+    padding: 30px;
+    width: 280px;
+    margin: 20px;
+    box-shadow: 0 0 12px rgb(100,70,50);
+
+}
+.label{
+    background: rgb(146, 228, 146);
+    color: rgb(3, 14, 17);
+    border: 1px dashed rgb(146, 228, 146);
+    border-radius: 10px;
+    width: 70px;
+    word-spacing: 2px;
+    font-family: arial sans-serif;
+}
+ .all{
+    display: flex;
+    gap: 10px;
+}
+button{
+    background: yellow;
+    color: maroon;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 5px 5px; 
+}
+.end{
+    font-size: 16px;
+    border: 2px solid rgb(133, 230, 213);
+    border-radius: 5px;
+    background: rgb(133,230,213);
+    color: maroon;
+    display: flex;
+}
