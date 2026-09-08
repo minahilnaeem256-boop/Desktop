@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>All about Superheroes</title>
+        <style>
+            body{
+                background-color: khaki;
+                font-family: Arial;
+            }
+            h1{
+                color: brown;
+                text-decoration: underline;
+            }
+            p{
+                color: rgb(36, 65, 8);
+            }
+            button{
+                background: rgb(53, 13, 13);
+                color: white;
+                border: 2px dashed rgb(119, 43, 35);
+                border-radius: 15px;
+                padding: 20px;
+                margin: 10px auto;
+                font-size: 16px;
+            }
+            button:hover{
+                transform: scale(1.2);
+                background: rgb(165, 8, 139);
+            }
+            .card{
+                background: linear-gradient(to left ,rgb(245, 228, 193),rgb(245,228,134));
+                border: 2px solid rgb(53,13,13);
+                border-radius: 15px;
+                display: flex;
+                padding: 10px 10px;
+                margin: 10px auto;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+                box-shadow: 2px 2px grey;
+                width: 500px;
+                text-align: center;
+            }
+            
+            .hero-name{
+                color: rgb(71, 38, 30);
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .hero-power{
+                color: rgb(78, 36, 17);
+                font-size: 16px;
+                font-style: italic;
+            }
+            .hero-mission{
+                color: rgb(78, 36, 17);
+                font-size: 16px;
+                font-style: italic;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>My SuperHero Card</h1>
+        <p>All fan-faviourites in here!</p>
+
+        <button onclick="showSuperhero()">Aevada-Kedavra</button>
+        <div id="herocard"></div>
+
+        <script>
+        class Superhero{
+            constructor(name,power,mission){
+                this.name= name;
+                this.power= power;
+                this.mission= mission;
+            }
+            describeHero(){
+                 return `
+            <div class="card">
+                <p class="hero-name">Name: ${this.name}</p>
+                <p class="hero-power">Power: ${this.power}</p>
+                <p class="hero-mission">Mission: ${this.mission}</p>
+            </div>
+        `;
+            }
+        }
+
+        function showSuperhero(){
+            let hero1= new Superhero(
+                "Spider-Man",
+                "spider-sense and flexibility",
+                "protects the city from evil beings."
+            );
+
+            let hero2= new Superhero(
+                "Thor",
+                "control of lightning",
+                "protecting his homeland using thunder from evil beings."
+            );
+
+             let hero3= new Superhero(
+                "Scarlet Witch",
+                "manipulation through magic",
+                "saving the world by manipulating evil beings."
+            );
+
+             let hero4= new Superhero(
+                "Hulk",
+                "super strength",
+                "smashing evil beings to protect people"
+            );
+
+            document.getElementById("herocard").innerHTML =
+            hero1.describeHero() +
+            hero2.describeHero() +
+            hero3.describeHero() +
+            hero4.describeHero();
+        }
+
+        </script>
+    </body>
+</html>
