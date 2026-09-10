@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>Text editor tool</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body{
+            background: linear-gradient(to right, lightgreen, rgb(60, 175, 60));
+            font-family: arial;
+        }
+        h1,h2{
+            color: rgb(73, 5, 5);
+        }
+        .card{
+            background:beige;
+            border: none;
+            border-radius: 15px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <h1>My text fixer tool</h1>
+        <p>With this text fixer tool you can find data types, search and replace words and catch errors.</p>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title">Find DataTypes</div>
+                <button class="btn btn-warning" onclick="checkType()">Check Datatype</button>
+                <div id="result" class="box p-3 mt-3 rounded">Click the button to check the data types.</div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title">Convert Data Types</div>
+                <button class="btn btn-danger" onclick="convertType()">Convert DataType</button>
+                <div id="srResult" class="box p-3 mt-3 rounded">Click the button to convert data types.</div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title">Find and Swap a word</div>
+                <p>My goodness i hate physics</p>
+                <button class="btn btn-info" onclick="ReplaceIt()">Replace it!</button></br>
+            </br>
+                <input id="findW" class="form-control-mb-2" placeholder = "word to find">
+                <input id="swapW" class="form-control-mb-2" placeholder="word to swap">
+                <div id="SRRresult" class="box p-3 mt-4 rounded">Click the button to replace the word.</div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title">Try and Catch an error</div>
+                <button class="btn btn-success" onclick="catchError()">Catch Error</button>
+                <div id="SRRresult_2" class="box p-3 mt-4 rounded">Click the button to catch error.</div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function checkType(){
+            var name= "aliya";
+            var age= 34;
+            var color= "red";
+            var allgood= true;
+
+            document.getElementById("result").innerHTML= 
+            "Name is a:" + typeof name + "</br>" +  "Age is a:" + typeof age + "</br>" +
+            "Color is a:" + typeof color+ "</br>" + "AllGood is a:" + typeof allgood ;
+
+        }
+        function convertType(){
+            var naam= "minal";
+            var naamNumber= Number(naam);
+            var age_2= 90;
+            var age_2Text= String(age_2);
+
+            document.getElementById("srResult").innerHTML= "original type:" + naamNumber + "</br>" + 
+            "Converted into:" + typeof naamNumber + "</br>" + 
+            "original type:" + age_2Text + "</br>" + "Converted into:" + typeof age_2Text + "</br>";
+        }
+        function ReplaceIt(){
+            var sen= "My goodness i hate Physics.";
+            var findword= document.getElementById("findW").value;
+            var swapword= document.getElementById("swapW").value;
+            if(sen.search(findword) === -1){
+                document.getElementById("SRRresult").innerHTML= "'" + findword + "' word does not exist";
+            }else{
+                document.getElementById("SRRresult").innerHTML= "'" + "the new sentence is: " + sen.replace(findword, swapword);
+            }
+        }
+        function catchError(){
+            try{
+                var result= totalMarks + 10;
+                document.getElementById("SRRresult_2").innerHTML = "Result:" + result;
+            }
+            catch(error){
+                document.getElementById("SRRresult_2").innerHTML = "opps! an error was caugth: "
+                + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
