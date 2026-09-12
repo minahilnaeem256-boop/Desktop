@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>JSON in javascript</title>
+    
+    <style>
+        body{
+            background: rgb(142, 201, 142);
+            font-family: arial;
+            text-align: center;
+            padding: 20px;
+        }
+        h1{
+            color: darkgreen;
+        }
+        button{ 
+            background: rgb(96, 158, 158);
+            color: darkblue;
+            border: 2px dashed white;
+            border-radius: 15px;
+            cursor: pointer;
+            padding: 10px;
+            box-shadow: 2px 2px grey;
+        }
+        div{
+            border: 2px solid rgb(8, 43, 8);
+            width: 280px;
+            margin: 6px auto;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Delivery Tracker!</h1>
+        <button onclick="saveOrder()">Save Order</button>
+
+        <div>JSON Text: <span id="json-text"></span></div>
+        <div>Loaded Item: <span id="loaded-item"></span></div>
+        <div>Loaded Price: <span id="loaded-price"></span></div>
+
+        <script>
+            let order={
+                item: "Pizza",
+                price: 500,
+                shop: "Snack Away"
+            };
+            function saveOrder(){
+                let jsonText = JSON.stringify(order);
+                let loadedOrder = JSON.parse(jsonText);
+
+                document.getElementById("json-text").innerHTML = jsonText;
+                document.getElementById("loaded-item").innerHTML = loadedOrder.item;
+                document.getElementById("loaded-price").innerHTML = "$" + loadedOrder.price;
+          
+            }
+        </script>
+    </body>
+</html>
