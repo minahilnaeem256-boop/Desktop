@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Validation in HTML</title>
+        <style>
+            body{
+                background: rgb(204, 240, 252);
+                font-family: Arial sans-serif;
+                color: black;
+                text-align: center;
+                padding: 10px 10px;
+                margin: 6px auto;
+            }
+            .container{
+                background: white;
+                border: 3px solid rgb(24, 24, 104);
+                border-radius: 20px;
+                box-shadow: 0 0 12px rgb(135, 151, 243);
+                padding: 10px 10px;
+                margin: 6px auto;
+                width: 500px;
+                
+            }
+            h1{
+                color: darkblue;
+                font-size: 35px;
+            }
+            input{
+                border:2px solid blue;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 6px auto;
+            }
+            button{
+                background: darkblue;
+                color: white;
+                border: darkblue;
+                border-radius: 20px;
+                width: 90px;
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h1>Lucky Draw</h1>
+        <p>Enter your name and test your luck</p>
+        <form onsubmit="tryluck(event)">
+        <input type="text" id="name" placeholder="your name">
+        <p id="display-name"></p>
+        <br>
+
+        <input type="number" id="num" placeholder="Guess a number(1-5)">
+        <p id="display-number"></p>
+        <br>
+
+       <button type="submit">trymyluck</button>
+       <p id="timer"></p>
+       <p id="result"></p>
+       </form>
+       </div>
+
+       
+       <script>
+         var seconds = 0;
+        setInterval(function() {
+        seconds = seconds + 1;
+        document.getElementById("timer").textContent = "You have been here for " + seconds + " seconds!";
+   }, 1000);
+
+            function tryluck(event){
+                event.preventDefault();
+                var name= document.getElementById("name").value;
+                var num=  document.getElementById("num").value ;
+                var ok= true;
+
+            console.log(name)
+            if (name==""){
+                document.getElementById("display-name").textContent = "please enter your name";
+                document.getElementById("display-name").style.color="red";
+                ok = false;
+            } else{
+                document.getElementById("display-name").textContent= "Great name!";
+                document.getElementById("display-name").style.color= "green";
+                
+            } 
+            
+            if(num ==""){
+                document.getElementById("display-number").textContent= "Please select a number!";
+                document.getElementById("display-number").style.color= "red";
+                ok= false;
+            } else{
+                document.getElementById("display-number").textContent= "Guess saved!";
+                document.getElementById("display-number").style.color= "green";
+            }
+            if(ok==true){
+                var lucky = Math.floor(Math.random() * 5) + 1;
+       if (num == lucky) {
+         document.getElementById("result").textContent = "You win, " + name + "! The lucky number was " + lucky + "!";
+         document.getElementById("result").style.color = "green";
+       } else {
+         document.getElementById("result").textContent = "So close, " + name + "! The lucky number was " + lucky + ". Try again!";
+         document.getElementById("result").style.color = "navy";
+        }
+      }
+    }
+
+            
+        </script>
+    </body>
+
+</html>
