@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            var str="ivAnAcAsenovA"
+            document.write(str.toUpperCase());
+            document.write("<br>");
+            document.write(str.toLowerCase());
+            document.write("<br>");
+            document.write(str.includes('A'));
+            document.write("<br>");
+            document.write(str.startsWith('f'));
+            document.write("<br>");
+            document.write(str.includes('G'));
+            document.write("<br>");
+
+            var str1 ="i am a GIRL**"
+            var all= new RegExp("i");
+            var call= all.test(str1);
+            document.write(call);
+            document.write("<br>");
+            var aa= new RegExp("\\*\\*");
+            var can= aa.test(str1);
+            document.write(can);
+
+            const day= prompt("enter day:");
+            console.log("today is",day );
+
+            var suits = ["shalwar kameez", "shirts","frocks","maxis","ghararas","coats"]
+            suits.pop();
+            console.log(suits);
+            suits.push("skirts");
+            console.log(suits);
+            suits.shift();
+            console.log(suits);
+            console.log(suits.includes("shirts"));
+            console.log(suits.slice(0,3));
+
+        </script>
+    </body>
+
+</html>
