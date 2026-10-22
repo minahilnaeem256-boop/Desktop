@@ -1,30 +1,102 @@
 <html>
     <head>
         <title>Banking App</title>
+        <style>
+            body{
+                background-color: rgb(255, 253, 208);
+                font-family:  Arial sans-serif;
+            }
+            #app{
+                background: #fff;
+                width: 400px;
+                height: 500px;
+                border: 3px solid rgb(0, 29, 75);
+                border-radius: 25px;
+                padding: 10px 10px;
+                margin: 0 auto;
+                position: relative;
+                top: 40px;
+                box-shadow: 4px 4px rgb(160, 167, 229);
+            }
+            .app-title{
+                color: rgb(0, 29, 75);
+                text-transform: uppercase;
+                text-align: center;
+            }
+            #balance-box, #entry-box{
+                border: 2px solid rgb(0, 29, 75);
+                border-radius: 15px;
+                box-shadow: 0 4px 12px grey;
+                width: 200px;
+                height: 100px;
+                margin: 15px auto;
+            }
+            .balance-label, .entry-label{
+                color: rgb(0, 29, 75);
+                text-decoration: underline;
+                margin: 10px;
+                font-size: 17px;
+                margin-top: 6px;
+            }
+            #amount {
+                display: block;
+                width: 150px;
+                margin: 15px auto;
+                padding: 5px;
+            }
+            #button-box{
+                display: flex;
+            }
+            #credit-btn{
+                width: 140px;
+                height: 30px;
+                margin: 15px auto;
+                padding: 5px;
+                border: none;
+                border-radius: 10px;
+                background-color: rgb(1, 83, 1);
+                color: white;
+                box-shadow: 0 4px 12px grey;
+            }
+            #debit-btn{
+                width: 140px;
+                height: 30px;
+                margin: 15px auto;
+                padding: 5px;
+                border: none;
+                border-radius: 10px;
+                background-color: rgb(160, 1, 1);
+                color: white;
+                box-shadow: 0 4px 12px grey;
+            }
+            #note{
+                color: grey;
+            }
+            
+        </style>
     </head>
     <body>
         <div id="app">
             <h1 class="app-title">Heera's Bank</h1>
-            <div class="balance-box">
+
+            <div id="balance-box">
                 <p class="balance-label">Available Balance</p>
                 <p class="balance">1000</p>
-                <button class="history">Transaction history</button>
             </div>
         </br>
 
-            <div class="entery-box">
-                <label class="entery-label">Enter Amount</label>
-                <input type="amount" id="amount" placeholder="enter amount">
+            <div id="entry-box">
+                <label class="entry-label">Enter Amount</label>
+                <input type="number" id="amount" placeholder="0">
             </div>
         </br>
 
-            <div class="button-box">
-                <button class="credit" id="credit-btn">Credit Button</button>
-                <button class="debit" id="debit-btn">Debit Button</button>
+            <div id="button-box">
+                <button class="action credit" id="credit-btn">Credit</button>
+                <button class="action debit" id="debit-btn">Debit</button>
             </div>
 
             <p id="note">Terms and Conditions Apply</p>
-            <p id="message"></p>
         </div>
     </body>
 </html>
