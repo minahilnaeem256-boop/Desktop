@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Heart</title>
+        <style>
+            body{
+                background: black;
+                display: grid;
+                place-items: center;
+                margin: 0;
+            }
+            .heart{
+                font-size: 200px;
+                color: #fff;
+                border: none;
+                text-shadow: 0 0 15px #fff, 0 0 45 #fff;
+                animation: beat 0.8s infinite alternate;   
+            }
+            @keyframes beat{
+               to{
+                transform: scale(1.25);
+                text-shadow: 0 0 30px #fff, 0 0 70px #fff;
+               } 
+            }
+        </style>
+
+    </head>
+
+    <body>
+    <div class="heart">♥</div>
+    </body>
+</html>
+
