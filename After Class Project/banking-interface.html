@@ -58,6 +58,9 @@
                 color: white;
                 box-shadow: 0 4px 12px grey;
             }
+             #credit-btn:hover{
+                transform: scale(1.1);
+            }
             #debit-btn{
                 width: 140px;
                 height: 30px;
@@ -68,6 +71,9 @@
                 background-color: rgb(160, 1, 1);
                 color: white;
                 box-shadow: 0 4px 12px grey;
+            }
+            #debit-btn:hover{
+                transform: scale(1.1);
             }
             #note{
                 color: grey;
@@ -81,7 +87,7 @@
 
             <div id="balance-box">
                 <p class="balance-label">Available Balance</p>
-                <p class="balance">1000</p>
+                <p id="balance">1000</p>
             </div>
         </br>
 
@@ -97,6 +103,71 @@
             </div>
 
             <p id="note">Terms and Conditions Apply</p>
+            <p id="message"></p>
         </div>
+        <script>
+            function getBalance(){
+                return Number(document.getElementById("balance").innerText);
+            }
+
+            function printBalance(num){
+                document.getElementById("balance").innerText = num;
+            }
+
+            function getAmount(){
+                return Number(document.getElementById("amount").value);
+            }
+
+            function showMessage(text){
+                document.getElementById("message").innerText = text;
+            }
+
+            function clearAmount(){
+                document.getElementById("amount").value= "";
+            }
+
+            function isAmountValid(){
+                var typed = document.getElementById("amount").value;
+
+                if (typed == ""){
+                    showMessage("Please enter an amount.");
+                    return false;
+                } else if(Number(typed) <= 0){
+                    showMessage("Amount must be more than zero.");
+                    return false;
+                }
+                return true;
+            }
+
+            document.getElementById("credit-btn").addEventListener("click", function(){
+                if (isAmountValid() == false){
+                    return;
+                }
+                var amount= getAmount();
+                var newBalance= getBalance() + amount;
+
+                printBalance(newBalance);
+                showMessage("Credited " + amount + " sucessfully.");
+                clearAmount();
+            });
+
+            document.getElementById("debit-btn").addEventListener("click",function(){
+                 if (isAmountValid() == false){
+                    return;
+                }
+                var amount= getAmount();
+
+                if(amount > getBalance()){
+                    showMessage("Not enough balance");
+                    return;
+                }
+                var newBalance= getBalance() - amount;
+
+                printBalance(newBalance);
+                showMessage("Debited " + amount + " sucessfully.");
+                clearAmount();
+
+            });
+        </script>
     </body>
 </html>
